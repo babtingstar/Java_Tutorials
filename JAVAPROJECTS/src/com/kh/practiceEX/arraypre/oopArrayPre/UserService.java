@@ -15,18 +15,18 @@ public class UserService {
         User u2 = new User();
         System.out.println("Enter the name of the user: ");
         String inputUserName = sc.nextLine();
-        if(inputUserName!=null && inputUserName.length() < 6){
+        if (inputUserName != null && inputUserName.length() < 6) {
             u2.setUsername(inputUserName);
             System.out.println("Username saved");
-        }else {
+        } else {
             System.out.println("Username is null or too long");
             return;
         }
         System.out.println("Enter the email of the user: ");
         String inputEmail = sc.nextLine();
-        if(inputEmail!=null && inputEmail.length() < 30){
+        if (inputEmail != null && inputEmail.length() < 30) {
             u2.setEmail(inputEmail);
-        }else {
+        } else {
             System.out.println("email is null or too long");
             return;
         }
@@ -44,5 +44,59 @@ public class UserService {
         users.add(0, u);
         users.add(1, u2);
         System.out.println(users.toString());
+    }
+    // 메서드 명칭 : void 기능 paramNameEmail
+    // Scanner 사용
+    //매개변수 생성자를 통해서 저장 나이는 필수가 아님
+    //매개변수 생성자 -> 이름 / 이메일만 필수로 받도록 수정
+
+    //이메일을 입력하시겠습니까? yes/no 대소문자 구분없이 입력받기
+
+    //yes 했다면 setEmail 을 통해 입력받은 이메일값 저장
+
+    public void paramNameEmail() {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter the name of the user : ");
+        String inputUserName = sc.nextLine();
+        if (inputUserName == null) {
+            System.out.println("name cannot be blank");
+            return;
+        }
+
+        System.out.println("Enter the email of the user : ");
+            String inputEmail = sc.nextLine();
+            if (inputEmail == null) {
+                System.out.println("email cannot be blank");
+                return;
+            }
+
+        User u = new User(inputUserName, inputEmail);
+
+        System.out.println("Gonna input Age? (yes/no) : ");
+        String inputAgeYN = sc.nextLine();
+        int inputAge = 0;
+        switch (inputAgeYN.toLowerCase()) {
+            case "yes":
+                System.out.println("Enter the Age of the user : ");
+                try {
+                    inputAge = sc.nextInt();
+                } catch (Exception e) {
+                    System.out.println("Age is not valid");
+                }
+                break;
+            case "no":
+                System.out.println("Age input aborted");
+                break;
+            default:
+                System.out.println("input YES or NO");
+                break;
+        }
+
+        u.setAge(inputAge);
+
+        System.out.println("---ToString---");
+        System.out.println(u.toString());
+
     }
 }
