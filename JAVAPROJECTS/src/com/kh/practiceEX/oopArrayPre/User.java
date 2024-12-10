@@ -1,4 +1,4 @@
-package com.kh.practiceEX.arraypre.oopArrayPre;
+package com.kh.practiceEX.oopArrayPre;
 
 public class User {
     // 전역변수 필드 멤버변수 인스턴스변수 속성

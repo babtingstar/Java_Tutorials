@@ -1,4 +1,4 @@
-package com.kh.practiceEX.arraypre.dbPre;
+package com.kh.practiceEX.dbPre;
 
 import java.util.Date;
 

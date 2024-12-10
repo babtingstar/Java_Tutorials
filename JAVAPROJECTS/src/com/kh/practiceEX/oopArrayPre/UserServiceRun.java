@@ -1,6 +1,4 @@
-package com.kh.practiceEX.arraypre.oopArrayPre;
-
-import java.util.Scanner;
+package com.kh.practiceEX.oopArrayPre;
 
 public class UserServiceRun {
     public static void main(String[] args) {
