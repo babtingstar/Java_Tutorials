@@ -10,6 +10,7 @@ public class StringRun {
         StringBufferEx strBufferEx = new StringBufferEx();
         StringBuilderEx strBuilderEx = new StringBuilderEx();
 
-        strEx.methodString();
+//        strEx.methodString();
+        strBuilderEx.methodStringBuilder();
     }
 }
